@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>博客</title>
+	<link rel="stylesheet" type="text/css" href="/public/main.css">
+	<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+	<script src="/public/js/index.js" type="text/javascript" charset="utf-8" async defer></script> 
+</head>
+<body>
+{% if userInfo._id %}
+<div style="">
+	
+<div id="userInfo">
+		 {{userInfo.username}}
+		</div>
+		{% if userInfo.isAdmin %}
+		<div>
+		 <p><span>你好 管理员!</span><a href="/admin">进入后台管理</a> </p>
+		</div>
+		{% else %}
+	<div>
+		欢迎光临我的博客
+	</div>
+	{% endif %}
+</div>
+<p><span id=""><a href="javascript:;" id="logout">退出</a></span></p>
+{% else %}
+	<header id="header" class="">
+		<div class="backimg">欢迎光临我的博客</div>
+		<form >
+			<h2>注册</h2>
+			账号：<input type="text" id="username" name="username"><br/>
+			密码：<input type="password" id="password" name="password"></br>
+			确认密码：<input type="password" id="repassword" name="repassword"><br/>
+			<input type="button" name="" value="确定" placeholder="" id='btn'>
+		</form>
+		
+	</header><!-- /header -->
+	<section>
+		<h2>登陆</h2>
+			账号：<input type="text" id="username1" name="username"><br/>
+			密码：<input type="password" id="password1" name="password"></br>
+			<input type="button" name="" value="确定" placeholder="" id='btn1'>
+	</section>
+	<footer>
+		
+	</footer>
+
+	
+</body>
+</html>
